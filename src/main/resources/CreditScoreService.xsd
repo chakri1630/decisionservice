@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.9-b130926.1035 svn-revision#5f6196f2b90e9460065a4c2f4e30e065b245e51e. --><xs:schema xmlns:tns="http://service.css.activeweb.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.css.activeweb.com/">
+
+<xs:element name="getScore" type="tns:getScore"></xs:element>
+
+<xs:element name="getScoreDetails" type="tns:getScoreDetails"></xs:element>
+
+<xs:element name="getScoreDetailsResponse" type="tns:getScoreDetailsResponse"></xs:element>
+
+<xs:element name="getScoreResponse" type="tns:getScoreResponse"></xs:element>
+
+<xs:complexType name="getScore">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScoreResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScoreDetails">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScoreDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:scoreDetails" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="scoreDetails">
+<xs:sequence>
+<xs:element name="bankAccountNumbers" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="loanAccountNumbers" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="score" type="xs:int" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
